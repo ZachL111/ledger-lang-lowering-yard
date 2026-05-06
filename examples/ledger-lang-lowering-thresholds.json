@@ -1,0 +1,17 @@
+{
+  "repo": "ledger-lang-lowering-yard",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 4,
+    "ship": 151,
+    "watch": 100
+  },
+  "terms": [
+    "IR pressure",
+    "lowering drift",
+    "stack depth",
+    "diagnostic reach"
+  ]
+}

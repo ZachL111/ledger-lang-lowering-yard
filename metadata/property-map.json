@@ -1,0 +1,28 @@
+{
+  "repo": "ledger-lang-lowering-yard",
+  "language": "Julia",
+  "category": "Compilers",
+  "goal": "Create a Julia reference implementation for lowering workflows, centered on security rule linting, safe and unsafe fixtures, and remediation hints.",
+  "weights": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 4
+  },
+  "thresholds": {
+    "ship": 151,
+    "watch": 100
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
