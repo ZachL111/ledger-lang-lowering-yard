@@ -1,0 +1,73 @@
+{
+  "repo": "ledger-lang-lowering-yard",
+  "language": "Julia",
+  "category": "Compilers",
+  "goal": "Create a Julia reference implementation for lowering workflows, centered on security rule linting, safe and unsafe fixtures, and remediation hints.",
+  "review_model": {
+    "terms": [
+      "IR pressure",
+      "lowering drift",
+      "stack depth",
+      "diagnostic reach"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "IR pressure",
+      "signal": 56,
+      "slack": 51,
+      "drag": 30,
+      "confidence": 94,
+      "score": 167,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "lowering drift",
+      "signal": 60,
+      "slack": 54,
+      "drag": 32,
+      "confidence": 82,
+      "score": 160,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "stack depth",
+      "signal": 53,
+      "slack": 39,
+      "drag": 17,
+      "confidence": 54,
+      "score": 148,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "diagnostic reach",
+      "signal": 85,
+      "slack": 43,
+      "drag": 16,
+      "confidence": 59,
+      "score": 224,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "IR pressure",
+      "signal": 87,
+      "slack": 54,
+      "drag": 17,
+      "confidence": 61,
+      "score": 238,
+      "lane": "ship"
+    }
+  ]
+}
